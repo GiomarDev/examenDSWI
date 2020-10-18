@@ -1,0 +1,89 @@
+﻿body {
+    background-color: lightgray;
+    font-family: Tahoma;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+}
+
+h2, h4, h6 {
+    text-align: center;
+}
+
+#centro {
+    margin: auto;
+    display: block;
+}
+
+#banner {
+    width: 1024px;
+}
+
+#franjaSuperior {
+    width: 1024px;
+    height: 40px;
+    padding: 5px;
+    margin: 0px;
+    background-color: dimgrey;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* Estilo para cada columna de la seccion */
+#columna1 {
+    margin: 0px;
+    float: left;
+    width: 13%;
+    text-align: center;
+}
+
+#columna2 {
+    margin: 0px;
+    float: left;
+    width: 87%;
+    padding: 2px;
+    background-color: gainsboro;
+}
+
+/*MENU DE OPCIONES*/
+.navigation {
+    width: 135px;
+}
+
+.mainmenu, .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .mainmenu a {
+        display: block;
+        background-color: Highlight;
+        text-decoration: none;
+        padding: 5px;
+        color: #000;
+    }
+
+        .mainmenu a:hover {
+            background-color: chartreuse;
+        }
+
+    .mainmenu li:hover .submenu {
+        display: block;
+        max-height: 200px;
+    }
+
+    .submenu a {
+        background-color: blueviolet;
+    }
+
+        .submenu a:hover {
+            background-color: chartreuse;
+        }
+
+.submenu {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: all 0.5s ease-out;
+}

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CL1.Models.Cliente>
+
+@{
+    ViewBag.Title = "listadoCliente";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+    <section id="columna2">
+        <h2>Listado de Cliente</h2>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.codigo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.movil)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.distrito)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.correo)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.codigo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movil)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.distrito)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.correo)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Actualizar", "modificaCliente", new {  id=item.codigo  }) |
+                        @Html.ActionLink("Detalle", "detalleCliente", new { id = item.codigo }) |
+                        @Html.ActionLink("Delete", "eliminaCliente", new { id = item.codigo })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </section>

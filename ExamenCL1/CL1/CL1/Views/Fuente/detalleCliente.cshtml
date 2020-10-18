@@ -1,0 +1,60 @@
+﻿@model CL1.Models.Cliente
+
+@{
+    ViewBag.Title = "detalleCliente";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+    <section id="columna2">
+        <h2>Detalle del Cliente</h2>
+
+        <div>
+            <h4>Cliente</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.codigo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.codigo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.nombre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.movil)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.movil)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.distrito)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.distrito)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.correo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.correo)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Editar", "modificaCliente", new {  id = Model.codigo  }) |
+            @Html.ActionLink("Volver al listado", "listadoCliente")
+        </p>
+    </section>
